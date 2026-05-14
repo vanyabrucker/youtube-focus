@@ -1,0 +1,44 @@
+/* ==UserStyle==
+@name           YouTube Focus
+@match          https://www.youtube.com/*
+@match          https://m.youtube.com/*
+==/UserStyle== */
+
+/* Removes Home Page feed */
+ytd-browse[page-subtype*='home'],
+ytm-browse > ytm-single-column-browse-results-renderer > div > div[tab-identifier*="FEwhat_to_watch"] {
+    display: none !important;
+}
+
+/* Removes sidebar section buttons */
+#items > ytd-guide-entry-renderer[is-primary]:nth-child(-n+5),
+#guide-renderer > #sections > ytd-guide-section-renderer:nth-child(n+2),
+ytd-mini-guide-renderer > #items > ytd-mini-guide-entry-renderer:nth-child(-n+3) {
+    display: none !important;
+}
+
+/* Removes video suggestions and related items */
+#related,
+.ytp-endscreen-content,
+ytm-watch ytm-compact-video-renderer,
+[section-identifier=related-items] {
+    display: none !important;
+}
+
+/* Removes metadata and premium banners */
+ytd-rich-metadata-renderer,
+ytm-watch-metadata-app-promo-renderer,
+ytm-rich-metadata-renderer,
+#masthead-ad,
+.ytd-rich-section-renderer,
+#hover-overlays {
+    display: none !important;
+}
+
+/* Prevents pause overlays and teaser cards */
+.ytp-scroll-min,
+.ytp-pause-overlay,
+.ytp-ce-element-show,
+.ytp-cards-teaser {
+    display: none !important;
+}
